@@ -1,0 +1,78 @@
+CRITICAL - 2026-09-23 23:46:15 --> Error: Undefined constant "App\Controllers\region"
+[Method: GET, Route: buscar/9]
+in APPPATH\Controllers\RegionesController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\RegionesController->buscar('9')
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegionesController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-23 23:48:46 --> Error: Undefined constant "App\Controllers\region"
+[Method: GET, Route: buscar/9]
+in APPPATH\Controllers\RegionesController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\RegionesController->buscar('9')
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegionesController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-23 23:50:38 --> Error: Undefined constant "App\Controllers\region"
+[Method: GET, Route: buscar/1]
+in APPPATH\Controllers\RegionesController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\RegionesController->buscar('1')
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegionesController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-23 23:55:26 --> Error: Call to a member function first() on array
+[Method: GET, Route: buscar/9]
+in APPPATH\Controllers\RegionesController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\RegionesController->buscar('9')
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegionesController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-23 23:56:18 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: buscar/1]
+in APPPATH\Views\frm_region_actualizar.php on line 11.
+ 1 APPPATH\Views\frm_region_actualizar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\frm_region_actualizar.php', 11)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\frm_region_actualizar.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('frm_region_actualizar', [], true)
+ 5 APPPATH\Controllers\RegionesController.php(41): view('frm_region_actualizar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\RegionesController->buscar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegionesController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-23 23:59:03 --> ErrorException: Undefined array key 0
+[Method: GET, Route: buscar/9]
+in APPPATH\Views\frm_region_actualizar.php on line 11.
+ 1 APPPATH\Views\frm_region_actualizar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\frm_region_actualizar.php', 11)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\frm_region_actualizar.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('frm_region_actualizar', [], true)
+ 5 APPPATH\Controllers\RegionesController.php(41): view('frm_region_actualizar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\RegionesController->buscar('9')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegionesController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-23 23:59:47 --> ErrorException: Undefined array key 0
+[Method: GET, Route: buscar/9]
+in APPPATH\Views\frm_region_actualizar.php on line 11.
+ 1 APPPATH\Views\frm_region_actualizar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\frm_region_actualizar.php', 11)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\frm_region_actualizar.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('frm_region_actualizar', [], true)
+ 5 APPPATH\Controllers\RegionesController.php(41): view('frm_region_actualizar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\RegionesController->buscar('9')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegionesController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

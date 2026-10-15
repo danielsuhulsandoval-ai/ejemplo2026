@@ -1,0 +1,34 @@
+CRITICAL - 2026-10-15 01:36:29 --> ParseError: syntax error, unexpected single-quoted string "direccion", expecting "]"
+[Method: GET, Route: ciudadanos]
+in APPPATH\Models\CiudadanoModel.php on line 15.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ci4_ciudadanos\\app\\Models\\CiudadanoModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\CiudadanoModel')
+ 3 APPPATH\Controllers\CiudadanoController.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\CiudadanoModel')
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CiudadanoController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CiudadanoController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-15 01:37:26 --> ErrorException: Undefined variable $ciudadano
+[Method: GET, Route: ciudadanos]
+in APPPATH\Controllers\CiudadanoController.php on line 11.
+ 1 APPPATH\Controllers\CiudadanoController.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ciudadano', 'C:\\xampp\\htdocs\\ci4_ciudadanos\\app\\Controllers\\CiudadanoController.php', 11)
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CiudadanoController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CiudadanoController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-15 01:40:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "ciudadano.php"
+[Method: GET, Route: ciudadanos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ciudadano.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('ciudadano', [], true)
+ 3 APPPATH\Controllers\CiudadanoController.php(12): view('ciudadano', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\CiudadanoController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CiudadanoController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

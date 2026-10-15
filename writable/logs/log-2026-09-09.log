@@ -1,0 +1,52 @@
+CRITICAL - 2026-09-09 23:48:09 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: regiones]
+in APPPATH\Controllers\RegionesController.php on line 12.
+ 1 APPPATH\Controllers\RegionesController.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Controllers\\RegionesController.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\RegionesController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegionesController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-09 23:48:48 --> ErrorException: Undefined array key "codigo_region"
+[Method: GET, Route: regiones]
+in APPPATH\Views\regiones.php on line 24.
+ 1 APPPATH\Views\regiones.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo_region"', 'C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\regiones.php', 24)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\regiones.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('regiones', [], true)
+ 5 APPPATH\Controllers\RegionesController.php(12): view('regiones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\RegionesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegionesController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-09 23:49:28 --> ErrorException: Undefined array key "codigo_region"
+[Method: GET, Route: regiones]
+in APPPATH\Views\regiones.php on line 24.
+ 1 APPPATH\Views\regiones.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo_region"', 'C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\regiones.php', 24)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\regiones.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('regiones', [], true)
+ 5 APPPATH\Controllers\RegionesController.php(12): view('regiones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\RegionesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegionesController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-09 23:50:03 --> ErrorException: Undefined array key "codigo_region"
+[Method: GET, Route: regiones]
+in APPPATH\Views\regiones.php on line 24.
+ 1 APPPATH\Views\regiones.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo_region"', 'C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\regiones.php', 24)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\regiones.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('regiones', [], true)
+ 5 APPPATH\Controllers\RegionesController.php(12): view('regiones', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\RegionesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegionesController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

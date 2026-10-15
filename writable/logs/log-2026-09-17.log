@@ -1,0 +1,12 @@
+CRITICAL - 2026-09-17 01:36:32 --> ParseError: syntax error, unexpected token ";", expecting ")"
+[Method: GET, Route: regiones]
+in APPPATH\Views\regiones.php on line 69.
+ 1 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('regiones', [], true)
+ 3 APPPATH\Controllers\RegionesController.php(12): view('regiones', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\RegionesController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegionesController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

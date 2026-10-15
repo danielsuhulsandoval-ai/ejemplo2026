@@ -1,0 +1,707 @@
+CRITICAL - 2026-10-14 01:43:19 --> ErrorException: Undefined variable $region
+[Method: GET, Route: deptos]
+in APPPATH\Views\departamentos.php on line 65.
+ 1 APPPATH\Views\departamentos.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $region', 'C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\departamentos.php', 65)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\departamentos.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('departamentos', [], true)
+ 5 APPPATH\Controllers\DepartamentosController.php(13): view('departamentos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DepartamentosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartamentosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:32:05 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: deptos]
+in APPPATH\Views\departamentos.php on line 61.
+ 1 APPPATH\Views\departamentos.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\departamentos.php', 61)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\proyectos2026\\ci4_ciudadanos\\app\\Views\\departamentos.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('departamentos', [], true)
+ 5 APPPATH\Controllers\DepartamentosController.php(18): view('departamentos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DepartamentosController->obtenerDatos()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DepartamentosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-14 23:47:46 --> Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MunicipiosController.php(12): App\Models\MunicipiosModel->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:47:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'municipios'
+[Method: GET, Route: municipios]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MunicipiosController.php(12): App\Models\MunicipiosModel->obtenerDatos()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:47:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MunicipiosController.php(12): App\Models\MunicipiosModel->obtenerDatos()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:47:46 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MunicipiosController.php(12): App\Models\MunicipiosModel->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-14 23:48:30 --> Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:48:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'municipios'
+[Method: GET, Route: municipios]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:48:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:48:31 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-14 23:50:54 --> Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:50:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'municipios'
+[Method: GET, Route: municipios]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:50:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:50:54 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-14 23:51:57 --> Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:51:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'municipios'
+[Method: GET, Route: municipios]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:51:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:51:57 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-14 23:53:43 --> Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:53:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'municipios'
+[Method: GET, Route: muni]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:53:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:53:43 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'municipios'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `municipios` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-14 23:55:04 --> Unknown column 'departamentos.cod_region' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:55:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'departamentos.cod_region' in 'on clause'
+[Method: GET, Route: muni]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:55:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'departamentos.cod_region' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:55:04 --> [Caused by] mysqli_sql_exception: Unknown column 'departamentos.cod_region' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-10-14 23:55:25 --> Unknown column 'departamentos.cod_region' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:55:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'departamentos.cod_region' in 'on clause'
+[Method: GET, Route: muni]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:55:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'departamentos.cod_region' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-10-14 23:55:25 --> [Caused by] mysqli_sql_exception: Unknown column 'departamentos.cod_region' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT `departamentos`.`cod_depto`, `departamentos`.`nombre_depto`, `regiones`.`nombre` AS `nombre_region`, `municipios`.`cod_muni`, `municipios`.`nombre_municipio`
+FROM `municipios`
+INNER JOIN `regiones` ON `departamentos`.`cod_region` = `regiones`.`cod_region`
+INNER JOIN `departamentos` ON `departamentos`.`cod_depto` = `municipios`.`cod_depto`', [], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MunicipiosModel.php(38): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MunicipiosController.php(11): App\Models\MunicipiosModel->obtenerDatos()
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MunicipiosController->obtenerDatos()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MunicipiosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
